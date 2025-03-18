@@ -66,10 +66,12 @@ margin-top: 60px;
 
 button {
     background-color: #3882F6;
-    color: #E5E7EB;
+    color: #F9FAF8;
     height: 25px;
     width: 80px;
+    font-weight: 800;
     border-radius: 5px;
+    border-color: #F9FAF8;
 }
 
 /* cuerpo del Landing page */
@@ -150,14 +152,15 @@ sub {
     display: flex;
     flex-wrap: wrap;
     background: #3882F6;
-    color:#F9FAF8 ;
+    color:#F9FAF8;
+    font-family: Roboto, sans-serif;
     justify-content: space-between;
     align-items: center;
     margin: 150px;
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     border-radius: 10px;
 }
 
@@ -165,5 +168,17 @@ sub {
     display: flex;
     font-size: 28px;
     color: #F9FAF8;
-    font-weight: 200;
+    font-weight: 700;
+}
+/* footer*/
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    background: #1F2937;
+    color: #F9FAF8;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: Roboto, sans-serif;
 }
