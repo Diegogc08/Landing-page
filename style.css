@@ -126,14 +126,13 @@ sub {
     display: flex;
     flex-wrap: wrap;
     background: #E5E7EB;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     padding-left: 220px;
     padding-right: 220px;
     padding-top: 80px;
     padding-bottom: 80px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 150px;
     
 }
 
@@ -144,4 +143,27 @@ sub {
     font-size: 36px;
     color: #1F2937;
     margin: 50px;
+}
+/*call to action*/
+
+.action-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: #3882F6;
+    color:#F9FAF8 ;
+    justify-content: space-between;
+    align-items: center;
+    margin: 150px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+}
+
+.action-title {
+    display: flex;
+    font-size: 28px;
+    color: #F9FAF8;
+    font-weight: 200;
 }
