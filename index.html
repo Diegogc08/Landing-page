@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,56 +11,72 @@
       <div class="header">
          <p>Curdi Institute</p>
            <ul>
-             <li><a href="#">Sobre nosotros</a></li>
-             <li><a href="#">Cursos</a></li>
-             <li><a href="#">Contactos</a></li>
+             <li><a href="#" data-es="Sobre nosotros" data-en="About us">Sobre nosotros</a></li>
+             <li><a href="#" data-es="Cursos" data-en="Courses">Cursos</a></li>
+             <li><a href="#" data-es="Contactos" data-en="Contact">Contactos</a></li>
+             <li><button id="lang-toggle" class="lang-btn">EN</button></li>
            </ul>
         </div>
        <div class="header-body">
            <div class="header-text">
-             <h1 class="mine-text">Bienvenido a la plataforma de Curdi</h1>
-             <p>Refuerza tus conocimientos en un entorno digital pensado especialmente para ti</p>
-             <button><a href="##"></a>Sign up</a></button>
+             <h1 class="mine-text" data-es="Bienvenido a la plataforma de Curdi" data-en="Welcome to the Curdi platform">Bienvenido a la plataforma de Curdi</h1>
+             <p data-es="Refuerza tus conocimientos en un entorno digital pensado especialmente para ti" data-en="Strengthen your knowledge in a digital environment designed especially for you">Refuerza tus conocimientos en un entorno digital pensado especialmente para ti</p>
+             <button><a href="#" data-es="Regístrate" data-en="Sign up">Regístrate</a></button>
            </div>
            <img src="./logo.png" alt="Project logo.">
        </div>
     </div>
     <div class="body">
       <div class="box1">
-         <p class="box-title">Información sobre nuestros cursos</p>
+         <p class="box-title" data-es="Información sobre nuestros cursos" data-en="Information about our courses">Información sobre nuestros cursos</p>
       </div>
         <div class="cards">
           <div class="card-container">
-             <div class="card"></div>
-             <sub>Matemáticas 1 - Secundaria</sub>
+             <div class="card"><img src="./mate1.jpg" alt="Matemáticas 1"></div>
+             <sub data-es="Matemáticas 1 - Secundaria" data-en="Mathematics 1 - High School">Matemáticas 1 - Secundaria</sub>
           </div>
           <div class="card-container">
-             <div class="card"></div>
-             <sub>Matemáticas 2 - Secundaria</sub>
+             <div class="card"><img src="./mate2.png" alt="Matemáticas 2"></div>
+             <sub data-es="Matemáticas 2 - Secundaria" data-en="Mathematics 2 - High School">Matemáticas 2 - Secundaria</sub>
           </div>
           <div class="card-container">
-             <div class="card"></div>
-             <sub>Matemáticas 3 - Secundaria</sub>
+             <div class="card"><img src="./matematicas3.jpg" alt="Matemáticas 3"></div>
+             <sub data-es="Matemáticas 3 - Secundaria" data-en="Mathematics 3 - High School">Matemáticas 3 - Secundaria</sub>
           </div>
           <div class="card-container">
-             <div class="card"></div>
-             <sub>Fisica - secundaria</sub>
+             <div class="card"><img src="./fisica.jpg" alt="Física"></div>
+             <sub data-es="Física - Secundaria" data-en="Physics - High School">Física - Secundaria</sub>
           </div>
         </div>
     </div>
     <div class="quote">
-        <div class="quote-text">This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice</div>
-       <div class="quote-author">Thor, God of Thunder</div>
-    </div> 
+        <div class="quote-text" data-es='"El aprendizaje es lo único que la mente nunca agota, nunca teme y nunca arrepiente."' data-en='"Learning is the only thing the mind never exhausts, never fears, and never regrets."'>"El aprendizaje es lo único que la mente nunca agota, nunca teme y nunca arrepiente."</div>
+       <div class="quote-author">— Leonardo da Vinci</div>
+    </div>
     <div class="action-container">
        <div class="action-text">
-          <div class="action-title">Call to action It's time!</div>
-          <div class="action-text">Sing up for our product by clicking that button right over there!</div>
+          <div class="action-title" data-es="¡Es hora de empezar a aprender!" data-en="It's time to start learning!">¡Es hora de empezar a aprender!</div>
+          <div class="action-text" data-es="Regístrate hoy y da el primer paso hacia el dominio de tus cursos." data-en="Sign up today and take the first step toward mastering your courses.">Regístrate hoy y da el primer paso hacia el dominio de tus cursos.</div>
        </div>
-        <button class="button-action">Sing up</button>
+        <button class="button-action" data-es="Regístrate" data-en="Sign up">Regístrate</button>
     </div>
     <div class="footer">
       <div class="footer-text">Copyright &copy; The Odin Project 2025</div>
     </div>
+
+    <script>
+      const toggle = document.getElementById('lang-toggle');
+      let currentLang = 'es';
+
+      toggle.addEventListener('click', () => {
+        currentLang = currentLang === 'es' ? 'en' : 'es';
+        toggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
+        document.documentElement.lang = currentLang;
+
+        document.querySelectorAll('[data-es][data-en]').forEach(el => {
+          el.textContent = el.dataset[currentLang];
+        });
+      });
+    </script>
   </body>
 </html>
